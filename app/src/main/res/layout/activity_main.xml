@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.josh.slot_machine.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/SlotsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="fill_horizontal"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/Slot1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"/>
+
+        <ImageView
+            android:id="@+id/Slot2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"/>
+
+        <ImageView
+            android:id="@+id/Slot3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/scoreLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/SlotsLayout"
+        android:layout_centerHorizontal="true"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Points:"
+            android:textSize="30dp"
+            />
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="30dp"/>
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/speedBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="2"
+        android:progress="1"
+        android:layout_below="@id/scoreLayout"/>
+    <Button
+        android:id="@+id/StartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/speedBar"
+        />
+    <Button
+        android:id="@+id/RuleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rules"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/StartButton"/>
+
+</RelativeLayout>
